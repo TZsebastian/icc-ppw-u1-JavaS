@@ -1,0 +1,127 @@
+:root {
+    --primary-dark: #1e3a8a;
+    --primary-main: #2563eb;
+    --primary-light: #dbeafe;
+    --bg-body: #f0f4f8;
+    --text-main: #1e293b;
+    --text-muted: #475569;
+    --danger: #ef4444;
+    --danger-hover: #b91c1c;
+    --success: #22c55e;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+h2 { 
+    color: var(--primary-dark); 
+    border-left: 4px solid var(--primary-main);
+    padding-left: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.info-estudiante, .estadisticas {
+    margin-bottom: 25px;
+}
+
+.filtros {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    padding: 8px 20px;
+    border: 1px solid var(--primary-light);
+    border-radius: 8px;
+    background: #f8fafc;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-main);
+    transition: all 0.3s ease;
+}
+
+.btn-filtro-activo {
+    background-color: var(--primary-main) !important;
+    color: white !important;
+    border-color: var(--primary-main);
+}
+
+/* Tarjeta */
+.card {
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid var(--primary-main);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #ffffff;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card h3 { margin: 0 0 10px 0; color: var(--primary-dark); }
+.card p { color: var(--text-muted); margin-bottom: 10px; }
+
+
+.card-footer {
+    display: flex;
+    justify-content: space-between; /* Badges a la izquierda, botón a la derecha */
+    align-items: center;
+    margin-top: 10px;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-categoria { background: var(--primary-light); color: var(--primary-main); }
+.prioridad-alta { background: #fee2e2; color: #ef4444; }
+.prioridad-media { background: #fef3c7; color: #d97706; }
+.prioridad-baja { background: #dcfce7; color: #15803d; }
+.estado-activo { background: #dcfce7; color: #15803d; }
+.estado-inactivo { background: #f1f5f9; color: #64748b; }
+
+.btn-eliminar {
+    background-color: var(--danger);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-eliminar:hover {
+    background-color: var(--danger-hover);
+}
