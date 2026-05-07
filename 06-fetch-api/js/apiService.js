@@ -45,58 +45,53 @@ const ApiService = {
       throw error;
     }
   },
-      /**
+
+  /**
    * GET - Obtener todos los posts (con límite opcional)
    */
   async getPosts(limit = 10) {
-    //  4.2.1: Retornar el resultado de llamar a this.request() con el endpoint correcto
-       return this.request(`/posts?_limit=${limit}`);
+    // TODO 4.2.1: Retornar el resultado de llamar a this.request() con el endpoint correcto
+    return this.request(`/posts?_limit=${limit}`);
   },
 
   /**
    * GET - Obtener un post por ID
    */
   async getPostById(id) {
-    //  4.2.2: Retornar el resultado de llamar a this.request() con /posts/{id}
-       return this.request(`/posts/${id}`);
+    // TODO 4.2.2: Retornar el resultado de llamar a this.request() con /posts/{id}
+    return this.request(`/posts/${id}`);
   },
 
-    /**
-   * POST - Crear un nuevo post
-   */
+  /**
+ * POST - Crear un nuevo post
+ */
   async createPost(postData) {
-    //  4.3.1: Retornar el resultado de llamar a this.request() con:
-    //   - endpoint: '/posts'
-    //   - options: { method: 'POST', body: JSON.stringify(postData) }
-       return this.request('/posts', {
-         method: 'POST',
-         body: JSON.stringify(postData)
-       });
+    // TODO 4.3.1: Retornar el resultado de llamar a this.request() con:
+    return this.request('/posts', {
+      method: 'POST',
+      body: JSON.stringify(postData)
+    });
   },
 
-    /**
-   * PUT - Actualizar un post completo
-   */
+  /**
+ * PUT - Actualizar un post completo
+ */
   async updatePost(id, postData) {
-    //  4.4.1: Retornar el resultado de llamar a this.request() con:
-    //   - endpoint: `/posts/${id}`
-    //   - options: { method: 'PUT', body: JSON.stringify(postData) }
-       return this.request(`/posts/${id}`, {
-         method: 'PUT',
-         body: JSON.stringify(postData)
-       });
+    // TODO 4.4.1: Retornar el resultado de llamar a this.request() con:
+    return this.request(`/posts/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(postData)
+    });
   },
 
   /**
    * DELETE - Eliminar un post
    */
   async deletePost(id) {
-    //  4.4.2: Retornar el resultado de llamar a this.request() con:
-    //   - endpoint: `/posts/${id}`
-    //   - options: { method: 'DELETE' }
-       return this.request(`/posts/${id}`, {
-         method: 'DELETE'
-       });
+    // TODO 4.4.2: Retornar el resultado de llamar a this.request() con:
+    return this.request(`/posts/${id}`, {
+      method: 'DELETE'
+    });
   },
 
   /**
